@@ -1150,6 +1150,157 @@ const categoryOrder = [
   "Soft Drinks"
 ];
 
+const uiText = {
+  en: {
+    heroEyebrow: "Ikarian sweet tastes since 1968",
+    heroIntro: "Coffee, herbal infusions, bakery favorites, breakfast plates, and simple café drinks.",
+    searchLabel: "Search menu",
+    searchPlaceholder: "Search coffee, tea, pie...",
+    all: "All",
+    ask: "Ask",
+    empty: "No menu items match your search.",
+    items: "items",
+    ingredients: "Ingredients",
+    allergens: "Allergens",
+    sizes: "Sizes / options",
+    clearSearch: "Clear search"
+  },
+  el: {
+    heroEyebrow: "Ικαριώτικες γλυκές γεύσεις από το 1968",
+    heroIntro: "Καφέδες, αφεψήματα, πίτες, πρωινά, γλυκά, παγωτά και ποτά.",
+    searchLabel: "Αναζήτηση μενού",
+    searchPlaceholder: "Αναζήτηση καφέ, τσάι, πίτα...",
+    all: "Όλα",
+    ask: "Ρωτήστε",
+    empty: "Δεν βρέθηκαν είδη για την αναζήτησή σας.",
+    items: "είδη",
+    ingredients: "Συστατικά",
+    allergens: "Αλλεργιογόνα",
+    sizes: "Μεγέθη / επιλογές",
+    clearSearch: "Καθαρισμός αναζήτησης"
+  }
+};
+
+const categoryTranslations = {
+  "Hot Coffees": "Ζεστοί Καφέδες",
+  "Cold Coffees": "Κρύοι Καφέδες",
+  "Non Caffeine Drinks": "Ροφήματα Χωρίς Καφεΐνη",
+  "Bakeries": "Πίτες και Σφολιάτες",
+  "Tea": "Τσάι και Αφεψήματα",
+  "Breakfast": "Πρωινά",
+  "Ice Creams": "Παγωτά",
+  "Cakes": "Πάστες",
+  "Syrup Cakes": "Γλυκά Ταψιού",
+  "Drinks": "Ποτά",
+  "Soft Drinks": "Αναψυκτικά"
+};
+
+const itemNameTranslations = {
+  "Greek coffee": "Ελληνικός καφές",
+  "Filter coffee": "Καφές φίλτρου",
+  "Nes café": "Νες καφέ",
+  "Espresso": "Εσπρέσο",
+  "Espresso macchiato": "Εσπρέσο macchiato",
+  "Espresso affogato": "Εσπρέσο affogato",
+  "Cappuccino": "Καπουτσίνο",
+  "Nes café frappe": "Νες καφέ φραπέ",
+  "Nes café frappe with ice cream": "Νες καφέ φραπέ με παγωτό",
+  "Espresso freddo": "Φρέντο εσπρέσο",
+  "Cappuccino freddo": "Φρέντο καπουτσίνο",
+  "Hot/cold chocolate": "Ζεστή / κρύα σοκολάτα",
+  "Milk shake": "Milk shake",
+  "Milk": "Γάλα",
+  "Tea, chamomile": "Τσάι, χαμομήλι",
+  "Fresh orange juice": "Φυσικός χυμός πορτοκάλι",
+  "Soft drinks": "Αναψυκτικά",
+  "Cheese pie": "Τυρόπιτα",
+  "Cheese Ring": "Τυροκούλουρο",
+  "Local cheese pie": "Χωριάτικη τυρόπιτα",
+  "Spinach pie": "Σπανακόπιτα",
+  "Chicken pie": "Κοτόπιτα",
+  "Ham and cheese pie": "Ζαμπονοτυρόπιτα",
+  "Bougatsa": "Μπουγάτσα",
+  "Chocolate croissant": "Κρουασάν σοκολάτας",
+  "Sandwich": "Σάντουιτς",
+  "Lipton Black Tea": "Μαύρο τσάι Lipton",
+  "Sage (Faskómilo)": "Φασκόμηλο",
+  "Chamomile (Chamomíli)": "Χαμομήλι",
+  "Lemon Verbena (Louíza)": "Λουίζα",
+  "Mountain Tea": "Τσάι του βουνού",
+  "Pennyroyal Mint (Fliskoúni)": "Φλισκούνι",
+  "Sarandakládi Blend": "Χαρμάνι Σαραντακλάδι",
+  "Boiled eggs": "Αυγά βραστά",
+  "Fried eggs": "Αυγά τηγανητά",
+  "Omelet": "Ομελέτα",
+  "French Toast": "French toast",
+  "Greek Yogurt": "Ελληνικό γιαούρτι",
+  "Cheese pie with honey and sesame": "Τυρόπιτα με μέλι και σουσάμι",
+  "Leek pie": "Πρασόπιτα",
+  "Sausage pie": "Λουκανικόπιτα",
+  "Bread with butter and honey": "Ψωμί με βούτυρο και μέλι",
+  "Toast": "Τοστ",
+  "Vanilla": "Βανίλια",
+  "Chocolate": "Σοκολάτα",
+  "Chocolate with cherry": "Σοκολάτα με βύσσινο",
+  "Stracciatella": "Στρατσιατέλα",
+  "Yogurt with honey": "Γιαούρτι με μέλι",
+  "Yogurt with cherry": "Γιαούρτι με βύσσινο",
+  "Yogurt with strawberry": "Γιαούρτι με φράουλα",
+  "Mastic ice cream": "Καϊμάκι",
+  "Tutti frutti": "Παρφέ",
+  "Cookies": "Μπισκότο",
+  "Caramel": "Καραμέλα",
+  "Strawberry": "Φράουλα",
+  "Pistachio": "Φυστίκι",
+  "Chocobanana": "Σοκομπανάνα",
+  "Bubble gum": "Τσιχλόφουσκα",
+  "Ferrero": "Φερέρο",
+  "Mocha": "Μόκα",
+  "Vanilla cake": "Πάστα βανίλια",
+  "Serano": "Σεράνο",
+  "Lacta": "Λάκτα",
+  "Ferrero cake": "Πάστα Φερέρο",
+  "Strawberry cake": "Πάστα φράουλα",
+  "Caramel cake": "Πάστα καραμέλα",
+  "Cheesecake": "Cheesecake",
+  "Chocolate pie": "Σοκολατόπιτα",
+  "Millefeuille": "Μιλφέιγ",
+  "Tiramisu": "Τιραμισού",
+  "Mouse": "Ποντικάκι",
+  "Black forest": "Black forest",
+  "Banoffee": "Μπανόφι",
+  "Profiterole": "Προφιτερόλ",
+  "Chocolate mousse": "Μους σοκολάτα",
+  "Strawberry mousse": "Μους φράουλα",
+  "Lila Pause": "Λίλα πάουζε",
+  "Cake with ice cream": "Πάστα με παγωτό",
+  "Galaktoboureko": "Γαλακτομπούρεκο",
+  "Baklava": "Μπακλαβάς",
+  "Kataifi": "Κανταΐφι",
+  "Orange pie": "Πορτοκαλόπιτα",
+  "Walnut pie": "Καρυδόπιτα",
+  "Ekmek with kataifi": "Εκμέκ κανταΐφι",
+  "Ekmek with walnut pie": "Εκμέκ με καρυδόπιτα",
+  "Syrup cake with ice cream": "Γλυκό ταψιού με παγωτό",
+  "Beer Amstel or Heineken": "Μπύρα Amstel ή Heineken",
+  "Ouzo": "Ούζο",
+  "Tsipouro": "Τσίπουρο",
+  "Cognac 3 stars": "Κονιάκ 3 αστέρων",
+  "Cognac 5 stars": "Κονιάκ 5 αστέρων",
+  "Cognac 7 stars": "Κονιάκ 7 αστέρων",
+  "Whiskey, martini or bacardi": "Ουίσκι, martini ή bacardi",
+  "Ikaria's Orangeade": "Πορτοκαλάδα Ικαρίας",
+  "Ikaria's Lemonade": "Λεμονάδα Ικαρίας",
+  "Ikaria's Sour cherry juice": "Βυσσινάδα Ικαρίας",
+  "Coca cola": "Coca cola",
+  "Green cola": "Green cola",
+  "Sprite": "Sprite",
+  "Fanta orangeade": "Fanta πορτοκαλάδα",
+  "Fanta lemonade": "Fanta λεμονάδα",
+  "Water 0.5 L": "Νερό 0,5 L",
+  "Water 1.5 L": "Νερό 1,5 L"
+};
+
 const categoryFilters = document.querySelector("#categoryFilters");
 const menuContainer = document.querySelector("#menuContainer");
 const searchInput = document.querySelector("#searchInput");
@@ -1157,12 +1308,111 @@ const clearSearch = document.querySelector("#clearSearch");
 const modal = document.querySelector("#itemModal");
 const closeModal = document.querySelector("#closeModal");
 const modalBackdrop = document.querySelector(".modal-backdrop");
+const languageButtons = document.querySelectorAll(".language-button");
 
 let activeCategory = "All";
+let currentLanguage = "en";
 let lastFocusedElement = null;
 
 function formatPrice(price) {
-  return price ? `€${price}` : "Ask";
+  return price ? `€${price}` : uiText[currentLanguage].ask;
+}
+
+function translateCategory(category) {
+  return currentLanguage === "el" ? categoryTranslations[category] || category : category;
+}
+
+function translateName(name) {
+  return currentLanguage === "el" ? itemNameTranslations[name] || name : name;
+}
+
+function greekDescription(item, name) {
+  if (item.category.includes("Coffee")) return `${name} από τον κατάλογό μας.`;
+  if (item.category === "Tea") return `${name}, αρωματικό αφέψημα για κάθε στιγμή της ημέρας.`;
+  if (item.category === "Bakeries") return `${name}, φρεσκοψημένη αλμυρή επιλογή.`;
+  if (item.category === "Breakfast") return `${name}, επιλογή πρωινού.`;
+  if (item.category === "Ice Creams") return `${name}, γεύση παγωτού.`;
+  if (item.category === "Cakes") return `${name}, γλυκιά επιλογή ζαχαροπλαστείου.`;
+  if (item.category === "Syrup Cakes") return `${name}, παραδοσιακό γλυκό ταψιού με σιρόπι.`;
+  if (item.category === "Drinks") return `${name}, ποτό από τον κατάλογό μας.`;
+  if (item.category === "Soft Drinks") return `${name}, δροσιστικό αναψυκτικό.`;
+  if (item.name === "Hot/cold chocolate") return "Σοκολάτα που σερβίρεται ζεστή ή κρύα.";
+  if (item.name === "Milk shake") return "Δροσερό και κρεμώδες milk shake.";
+  if (item.name === "Fresh orange juice") return "Φρέσκος χυμός πορτοκάλι.";
+  return item.description;
+}
+
+function greekIngredients(item) {
+  if (item.category.includes("Coffee")) return "Καφές, νερό και προαιρετικά ζάχαρη ή γάλα ανάλογα με την επιλογή.";
+  if (item.category === "Tea") return "Βότανα ή τσάι και νερό.";
+  if (item.category === "Bakeries") return "Ζύμη ή σφολιάτα και γέμιση ανάλογα με την επιλογή.";
+  if (item.category === "Breakfast") return "Συστατικά πρωινού ανάλογα με την επιλογή.";
+  if (item.category === "Ice Creams") return "Βάση παγωτού και γεύση ανάλογα με την επιλογή.";
+  if (item.category === "Cakes") return "Βάση γλυκού, κρέμα ή σοκολάτα ανάλογα με την επιλογή.";
+  if (item.category === "Syrup Cakes") return "Βάση γλυκού, σιρόπι και γέμιση ανάλογα με την επιλογή.";
+  if (item.category === "Drinks") return "Ποτό ανάλογα με την επιλογή.";
+  if (item.category === "Soft Drinks") return item.name.includes("Water") ? "Νερό." : "Αναψυκτικό.";
+  return item.ingredients;
+}
+
+function greekAllergens(item) {
+  if (item.category.includes("Coffee") || item.category === "Tea" || item.category === "Soft Drinks" || item.category === "Drinks") {
+    return "Ρωτήστε το προσωπικό για αλλεργιογόνα ή πιθανή επιμόλυνση.";
+  }
+  if (item.category === "Bakeries") return "Γλουτένη. Μπορεί να περιέχει γάλα, αυγό, σουσάμι ή ξηρούς καρπούς.";
+  if (item.category === "Breakfast") return "Μπορεί να περιέχει γλουτένη, γάλα ή αυγό ανάλογα με την επιλογή.";
+  if (item.category === "Ice Creams") return "Γάλα. Μπορεί να περιέχει αυγό, σόγια ή ξηρούς καρπούς.";
+  if (item.category === "Cakes" || item.category === "Syrup Cakes") return "Γλουτένη, γάλα, αυγό. Μπορεί να περιέχει ξηρούς καρπούς ή σόγια.";
+  return item.allergens;
+}
+
+function greekSizes(item) {
+  if (item.sizes.includes("1 scoop")) return "1 μπάλα €2.50, 2 μπάλες €4.50, 3 μπάλες €6.00.";
+  return item.sizes
+    .replace("Single €2.00, double €3.00.", "Μονός €2.00, διπλός €3.00.")
+    .replace("Regular cup.", "Κανονικό φλιτζάνι.")
+    .replace("Regular glass.", "Κανονικό ποτήρι.")
+    .replace("Single piece.", "Ένα τεμάχιο.")
+    .replace("Single serving.", "Μία μερίδα.")
+    .replace("Single bottle or can.", "Ένα μπουκάλι ή κουτάκι.")
+    .replace("Single bottle.", "Ένα μπουκάλι.")
+    .replace("Single sandwich.", "Ένα σάντουιτς.")
+    .replace("Single toast.", "Ένα τοστ.")
+    .replace("Regular serving.", "Κανονική μερίδα.")
+    .replace("Regular bowl.", "Κανονικό μπολ.")
+    .replace("Hot or cold.", "Ζεστό ή κρύο.")
+    .replace("0.5 L bottle.", "Μπουκάλι 0,5 L.")
+    .replace("1.5 L bottle.", "Μπουκάλι 1,5 L.")
+    .replace("seasonal and limited", "εποχιακό και περιορισμένο");
+}
+
+function localizeItem(item) {
+  if (currentLanguage === "en") return item;
+  const name = translateName(item.name);
+  return {
+    ...item,
+    category: translateCategory(item.category),
+    name,
+    description: greekDescription(item, name),
+    ingredients: greekIngredients(item),
+    allergens: greekAllergens(item),
+    sizes: greekSizes(item)
+  };
+}
+
+function updateStaticText() {
+  document.documentElement.lang = currentLanguage;
+  document.querySelector("#heroEyebrow").textContent = uiText[currentLanguage].heroEyebrow;
+  document.querySelector("#heroIntro").textContent = uiText[currentLanguage].heroIntro;
+  document.querySelector("#searchLabel").textContent = uiText[currentLanguage].searchLabel;
+  searchInput.placeholder = uiText[currentLanguage].searchPlaceholder;
+  clearSearch.setAttribute("aria-label", uiText[currentLanguage].clearSearch);
+  document.querySelector("#ingredientsLabel").textContent = uiText[currentLanguage].ingredients;
+  document.querySelector("#allergensLabel").textContent = uiText[currentLanguage].allergens;
+  document.querySelector("#sizesLabel").textContent = uiText[currentLanguage].sizes;
+  languageButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.language === currentLanguage);
+  });
 }
 
 function initials(name) {
@@ -1188,13 +1438,15 @@ function renderFilters() {
   categoryFilters.innerHTML = categories
     .map((category) => {
       const isActive = category === activeCategory ? " active" : "";
-      return `<button class="filter-button${isActive}" type="button" data-category="${category}">${category}</button>`;
+      const label = category === "All" ? uiText[currentLanguage].all : translateCategory(category);
+      return `<button class="filter-button${isActive}" type="button" data-category="${category}">${label}</button>`;
     })
     .join("");
 }
 
 function itemMatchesSearch(item, query) {
-  const haystack = `${item.category} ${item.name} ${item.description} ${item.ingredients}`.toLowerCase();
+  const localized = localizeItem(item);
+  const haystack = `${localized.category} ${localized.name} ${localized.description} ${localized.ingredients} ${item.category} ${item.name}`.toLowerCase();
   return haystack.includes(query);
 }
 
@@ -1212,7 +1464,7 @@ function renderMenu() {
   const categories = getCategories().filter((category) => items.some((item) => item.category === category));
 
   if (!items.length) {
-    menuContainer.innerHTML = `<p class="empty-state">No menu items match your search.</p>`;
+    menuContainer.innerHTML = `<p class="empty-state">${uiText[currentLanguage].empty}</p>`;
     return;
   }
 
@@ -1221,14 +1473,15 @@ function renderMenu() {
       const categoryItems = items.filter((item) => item.category === category);
       const cards = categoryItems
         .map((item) => {
+          const localized = localizeItem(item);
           const itemIndex = menuItems.indexOf(item);
           const imageStyle = item.image ? `background-image: url('${item.image}')` : "";
           return `
             <button class="menu-card" type="button" data-index="${itemIndex}" style="--accent: ${item.accent}">
-              <span class="thumb" style="${imageStyle}">${item.image ? "" : makePlaceholder(item)}</span>
+              <span class="thumb" style="${imageStyle}">${item.image ? "" : makePlaceholder(localized)}</span>
               <span class="card-copy">
-                <span class="card-title">${item.name}</span>
-                <span class="card-description">${item.description}</span>
+                <span class="card-title">${localized.name}</span>
+                <span class="card-description">${localized.description}</span>
               </span>
               <span class="card-price">${formatPrice(item.price)}</span>
             </button>
@@ -1239,8 +1492,8 @@ function renderMenu() {
       return `
         <section class="category-section">
           <div class="category-heading">
-            <h2>${category}</h2>
-            <p class="category-count">${categoryItems.length} items</p>
+            <h2>${translateCategory(category)}</h2>
+            <p class="category-count">${categoryItems.length} ${uiText[currentLanguage].items}</p>
           </div>
           <div class="items-grid">${cards}</div>
         </section>
@@ -1250,14 +1503,15 @@ function renderMenu() {
 }
 
 function openModal(item) {
+  const localized = localizeItem(item);
   lastFocusedElement = document.activeElement;
-  document.querySelector("#modalCategory").textContent = item.category;
-  document.querySelector("#modalTitle").textContent = item.name;
+  document.querySelector("#modalCategory").textContent = localized.category;
+  document.querySelector("#modalTitle").textContent = localized.name;
   document.querySelector("#modalPrice").textContent = formatPrice(item.price);
-  document.querySelector("#modalDescription").textContent = item.description;
-  document.querySelector("#modalIngredients").textContent = item.ingredients;
-  document.querySelector("#modalAllergens").textContent = item.allergens;
-  document.querySelector("#modalSizes").textContent = item.sizes;
+  document.querySelector("#modalDescription").textContent = localized.description;
+  document.querySelector("#modalIngredients").textContent = localized.ingredients;
+  document.querySelector("#modalAllergens").textContent = localized.allergens;
+  document.querySelector("#modalSizes").textContent = localized.sizes;
 
   const modalImage = document.querySelector("#modalImage");
   modalImage.style.setProperty("--accent", item.accent);
@@ -1297,6 +1551,15 @@ clearSearch.addEventListener("click", () => {
   renderMenu();
 });
 
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    currentLanguage = button.dataset.language;
+    updateStaticText();
+    renderFilters();
+    renderMenu();
+  });
+});
+
 closeModal.addEventListener("click", closeItemModal);
 modalBackdrop.addEventListener("click", closeItemModal);
 
@@ -1306,5 +1569,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+updateStaticText();
 renderFilters();
 renderMenu();

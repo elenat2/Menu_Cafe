@@ -13,15 +13,21 @@
       <img src="logo.png" alt="">
     </div>
     <div>
-      <p class="eyebrow">Ikarian sweet tastes since 1968</p>
+      <p class="eyebrow" id="heroEyebrow">Ikarian sweet tastes since 1968</p>
       <h1>Tsantiris Menu</h1>
-      <p class="intro">Coffee, herbal infusions, bakery favorites, breakfast plates, and simple café drinks.</p>
+      <p class="intro" id="heroIntro">Coffee, herbal infusions, bakery favorites, breakfast plates, and simple café drinks.</p>
     </div>
   </header>
 
   <main>
     <section class="controls" aria-label="Menu controls">
-      <label class="search-label" for="searchInput">Search menu</label>
+      <div class="controls-top">
+        <label class="search-label" for="searchInput" id="searchLabel">Search menu</label>
+        <div class="language-toggle" aria-label="Language">
+          <button class="language-button active" type="button" data-language="en">EN</button>
+          <button class="language-button" type="button" data-language="el">EL</button>
+        </div>
+      </div>
       <div class="search-wrap">
         <input id="searchInput" type="search" placeholder="Search coffee, tea, pie..." autocomplete="off">
         <button id="clearSearch" class="icon-button" type="button" aria-label="Clear search">×</button>
@@ -46,15 +52,15 @@
         <p id="modalDescription" class="modal-description"></p>
         <dl class="details-list">
           <div>
-            <dt>Ingredients</dt>
+            <dt id="ingredientsLabel">Ingredients</dt>
             <dd id="modalIngredients"></dd>
           </div>
           <div>
-            <dt>Allergens</dt>
+            <dt id="allergensLabel">Allergens</dt>
             <dd id="modalAllergens"></dd>
           </div>
           <div>
-            <dt>Sizes / options</dt>
+            <dt id="sizesLabel">Sizes / options</dt>
             <dd id="modalSizes"></dd>
           </div>
         </dl>

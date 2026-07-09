@@ -115,11 +115,47 @@ main {
 
 .search-label {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.controls-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.language-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 2.45rem);
+  min-height: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.78);
+}
+
+.language-button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 800 0.76rem Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.language-button.active {
+  background: var(--wine);
+  color: var(--cream);
+}
+
+.language-button:focus-visible {
+  outline: 3px solid rgba(157, 47, 69, 0.35);
+  outline-offset: 2px;
 }
 
 .search-wrap {
