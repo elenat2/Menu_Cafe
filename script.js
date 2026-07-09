@@ -135,17 +135,6 @@ const menuItems = [
   },
   {
     category: "Non Caffeine Drinks",
-    name: "Tea, chamomile",
-    price: "2.00",
-    description: "Gentle herbal drink served hot.",
-    ingredients: "Chamomile infusion, water.",
-    allergens: "No common allergens. Ask staff about cross-contact.",
-    sizes: "Regular cup.",
-    image: "",
-    accent: "#9d6b50"
-  },
-  {
-    category: "Non Caffeine Drinks",
     name: "Fresh orange juice",
     price: "3.00",
     description: "Fresh orange juice, bright and refreshing.",
@@ -1186,7 +1175,6 @@ const itemNameTranslations = {
   "Hot/cold chocolate": "Ζεστή / κρύα σοκολάτα",
   "Milk shake": "Milk shake",
   "Milk": "Γάλα",
-  "Tea, chamomile": "Τσάι, χαμομήλι",
   "Fresh orange juice": "Φυσικός χυμός πορτοκάλι",
   "Soft drinks": "Αναψυκτικά",
   "Cheese pie": "Τυρόπιτα",
