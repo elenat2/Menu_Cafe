@@ -1,0 +1,465 @@
+:root {
+  --paper: #f8f1e8;
+  --paper-deep: #e7dac9;
+  --ink: #151210;
+  --muted: #6e6258;
+  --line: #d2c3b2;
+  --wine: #9d2f45;
+  --sage: #8c9b78;
+  --cream: #fffaf3;
+  --shadow: 0 18px 45px rgba(37, 29, 21, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 0 12%, rgba(157, 47, 69, 0.08), transparent 28rem),
+    linear-gradient(90deg, rgba(255, 250, 243, 0.86) 0 26%, transparent 26%),
+    var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.4rem 1rem 1rem;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -4.5rem;
+  top: -1rem;
+  width: 12rem;
+  height: 12rem;
+  border: 0.45rem double rgba(21, 18, 16, 0.08);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 4.3rem;
+  height: 4.3rem;
+  background: var(--wine);
+  color: #fff4d8;
+  border: 0.18rem solid #fff5ec;
+  border-radius: 28% 32% 30% 34%;
+  box-shadow: 0 0 0 0.18rem rgba(157, 47, 69, 0.25);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-style: italic;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--wine);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.7rem, 17vw, 5.8rem);
+  font-style: italic;
+  line-height: 0.92;
+}
+
+.intro {
+  margin: 0.7rem 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+main {
+  width: min(100%, 68rem);
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 0.75rem 0 0.85rem;
+  background: linear-gradient(180deg, var(--paper) 72%, rgba(248, 241, 232, 0));
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-wrap {
+  display: grid;
+  grid-template-columns: 1fr 2.8rem;
+  align-items: center;
+  min-height: 3rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 0.6rem 1.6rem rgba(40, 31, 23, 0.07);
+}
+
+input[type="search"] {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 0.95rem;
+  color: var(--ink);
+  font: 600 1rem Arial, Helvetica, sans-serif;
+}
+
+input[type="search"]::placeholder {
+  color: #9b8d80;
+}
+
+.icon-button,
+.close-button {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0.2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.icon-button:focus-visible,
+.close-button:focus-visible,
+.filter-button:focus-visible,
+.menu-card:focus-visible {
+  outline: 3px solid rgba(157, 47, 69, 0.35);
+  outline-offset: 3px;
+}
+
+.category-filters {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none;
+}
+
+.category-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-button {
+  flex: 0 0 auto;
+  min-height: 2.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.75);
+  color: var(--ink);
+  padding: 0 0.9rem;
+  font: 700 0.84rem Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.category-section {
+  padding: 1rem 0 0.6rem;
+}
+
+.category-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 0.8rem;
+}
+
+.category-heading h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.65rem;
+  font-style: italic;
+}
+
+.category-count {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.items-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.menu-card {
+  display: grid;
+  grid-template-columns: 4.4rem 1fr auto;
+  gap: 0.8rem;
+  width: 100%;
+  min-height: 6.2rem;
+  align-items: center;
+  border: 1px solid rgba(21, 18, 16, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 250, 243, 0.82);
+  color: inherit;
+  padding: 0.65rem;
+  text-align: left;
+  box-shadow: 0 0.5rem 1.2rem rgba(40, 31, 23, 0.06);
+  cursor: pointer;
+}
+
+.menu-card:active {
+  transform: scale(0.99);
+}
+
+.thumb,
+.modal-image {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.26), transparent 45%),
+    var(--accent, var(--sage));
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  width: 4.4rem;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  color: rgba(255, 250, 243, 0.92);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.card-copy {
+  min-width: 0;
+}
+
+.card-title {
+  margin: 0 0 0.2rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.card-price {
+  align-self: start;
+  margin: 0.1rem 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.empty-state {
+  margin: 2rem 0;
+  padding: 1.2rem;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  align-items: end;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(21, 18, 16, 0.48);
+  cursor: pointer;
+}
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 18px 18px 0 0;
+  background: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.close-button {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  z-index: 2;
+  background: rgba(255, 250, 243, 0.86);
+  color: var(--ink);
+}
+
+.modal-image {
+  min-height: 13rem;
+}
+
+.modal-body {
+  padding: 1rem 1rem 1.3rem;
+}
+
+.modal-category {
+  margin: 0 0 0.35rem;
+  color: var(--wine);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.modal-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.55rem;
+}
+
+.modal-title-row h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.modal-price {
+  margin: 0.15rem 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.modal-description {
+  margin: 0.85rem 0 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.details-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.details-list div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fffdf8;
+}
+
+.details-list dt {
+  margin-bottom: 0.2rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.details-list dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    width: min(100%, 68rem);
+    margin: 0 auto;
+    padding-top: 2rem;
+    grid-template-columns: 6rem 1fr;
+  }
+
+  .brand-mark {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modal {
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .modal-panel {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    width: min(58rem, 100%);
+    max-height: 84vh;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .modal-image {
+    min-height: 100%;
+  }
+}
