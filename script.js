@@ -58,17 +58,6 @@ const menuItems = [
   },
   {
     category: "Hot Coffees",
-    name: "Espresso affogato",
-    price: "3.50",
-    description: "Espresso poured over a sweet, creamy base.",
-    ingredients: "Espresso, vanilla ice cream.",
-    allergens: "Milk. May contain egg or nuts depending on ice cream.",
-    sizes: "Regular serving.",
-    image: "",
-    accent: "#8b6f55"
-  },
-  {
-    category: "Hot Coffees",
     name: "Cappuccino",
     price: "3.00",
     description: "Espresso with steamed milk and soft foam.",
@@ -85,17 +74,6 @@ const menuItems = [
     description: "Chilled whipped instant coffee, a Greek café classic.",
     ingredients: "Instant coffee, water, ice, optional milk and sugar.",
     allergens: "Milk if added.",
-    sizes: "Regular glass.",
-    image: "",
-    accent: "#667f8a"
-  },
-  {
-    category: "Cold Coffees",
-    name: "Nes café frappe with ice cream",
-    price: "4.50",
-    description: "Classic frappe made richer with ice cream.",
-    ingredients: "Instant coffee, water, ice, ice cream, optional milk and sugar.",
-    allergens: "Milk. May contain egg or nuts depending on ice cream.",
     sizes: "Regular glass.",
     image: "",
     accent: "#667f8a"
@@ -1201,10 +1179,8 @@ const itemNameTranslations = {
   "Nes café": "Νες καφέ",
   "Espresso": "Εσπρέσο",
   "Espresso macchiato": "Εσπρέσο macchiato",
-  "Espresso affogato": "Εσπρέσο affogato",
   "Cappuccino": "Καπουτσίνο",
   "Nes café frappe": "Νες καφέ φραπέ",
-  "Nes café frappe with ice cream": "Νες καφέ φραπέ με παγωτό",
   "Espresso freddo": "Φρέντο εσπρέσο",
   "Cappuccino freddo": "Φρέντο καπουτσίνο",
   "Hot/cold chocolate": "Ζεστή / κρύα σοκολάτα",
@@ -1301,6 +1277,16 @@ const itemNameTranslations = {
   "Water 1.5 L": "Νερό 1,5 L"
 };
 
+const coffeeIceCreamOption = {
+  en: "With ice cream +€1.50.",
+  el: "Με παγωτό +€1.50."
+};
+
+const coffeeIceCreamAllergen = {
+  en: "Ice cream option contains milk and may contain egg or nuts.",
+  el: "Η επιλογή με παγωτό περιέχει γάλα και μπορεί να περιέχει αυγό ή ξηρούς καρπούς."
+};
+
 const categoryFilters = document.querySelector("#categoryFilters");
 const menuContainer = document.querySelector("#menuContainer");
 const searchInput = document.querySelector("#searchInput");
@@ -1324,6 +1310,22 @@ function translateCategory(category) {
 
 function translateName(name) {
   return currentLanguage === "el" ? itemNameTranslations[name] || name : name;
+}
+
+function isCoffeeItem(item) {
+  return item.category.includes("Coffee");
+}
+
+function appendSentence(text, sentence) {
+  return text.includes(sentence) ? text : `${text} ${sentence}`;
+}
+
+function englishAllergens(item) {
+  return isCoffeeItem(item) ? appendSentence(item.allergens, coffeeIceCreamAllergen.en) : item.allergens;
+}
+
+function englishSizes(item) {
+  return isCoffeeItem(item) ? appendSentence(item.sizes, coffeeIceCreamOption.en) : item.sizes;
 }
 
 function greekDescription(item, name) {
@@ -1357,7 +1359,8 @@ function greekIngredients(item) {
 
 function greekAllergens(item) {
   if (item.category.includes("Coffee") || item.category === "Tea" || item.category === "Soft Drinks" || item.category === "Drinks") {
-    return "Ρωτήστε το προσωπικό για αλλεργιογόνα ή πιθανή επιμόλυνση.";
+    const allergens = "Ρωτήστε το προσωπικό για αλλεργιογόνα ή πιθανή επιμόλυνση.";
+    return isCoffeeItem(item) ? appendSentence(allergens, coffeeIceCreamAllergen.el) : allergens;
   }
   if (item.category === "Bakeries") return "Γλουτένη. Μπορεί να περιέχει γάλα, αυγό, σουσάμι ή ξηρούς καρπούς.";
   if (item.category === "Breakfast") return "Μπορεί να περιέχει γλουτένη, γάλα ή αυγό ανάλογα με την επιλογή.";
@@ -1368,7 +1371,7 @@ function greekAllergens(item) {
 
 function greekSizes(item) {
   if (item.sizes.includes("1 scoop")) return "1 μπάλα €2.50, 2 μπάλες €4.50, 3 μπάλες €6.00.";
-  return item.sizes
+  const sizes = item.sizes
     .replace("Single €2.00, double €3.00.", "Μονός €2.00, διπλός €3.00.")
     .replace("Regular cup.", "Κανονικό φλιτζάνι.")
     .replace("Regular glass.", "Κανονικό ποτήρι.")
@@ -1384,10 +1387,17 @@ function greekSizes(item) {
     .replace("0.5 L bottle.", "Μπουκάλι 0,5 L.")
     .replace("1.5 L bottle.", "Μπουκάλι 1,5 L.")
     .replace("seasonal and limited", "εποχιακό και περιορισμένο");
+  return isCoffeeItem(item) ? appendSentence(sizes, coffeeIceCreamOption.el) : sizes;
 }
 
 function localizeItem(item) {
-  if (currentLanguage === "en") return item;
+  if (currentLanguage === "en") {
+    return {
+      ...item,
+      allergens: englishAllergens(item),
+      sizes: englishSizes(item)
+    };
+  }
   const name = translateName(item.name);
   return {
     ...item,
