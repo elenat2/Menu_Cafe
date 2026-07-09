@@ -1275,6 +1275,8 @@ const coffeeIceCreamAllergen = {
   el: "Η επιλογή με παγωτό περιέχει γάλα και μπορεί να περιέχει αυγό ή ξηρούς καρπούς."
 };
 
+const categoriesWithItemIcons = new Set(["Bakeries", "Breakfast", "Cakes", "Syrup Cakes"]);
+
 const categoryFilters = document.querySelector("#categoryFilters");
 const menuContainer = document.querySelector("#menuContainer");
 const searchInput = document.querySelector("#searchInput");
@@ -1426,6 +1428,10 @@ function makePlaceholder(item) {
   return `<span>${initials(item.name)}</span>`;
 }
 
+function shouldShowItemIcon(item) {
+  return categoriesWithItemIcons.has(item.category);
+}
+
 function getCategories() {
   const knownCategories = new Set(menuItems.map((item) => item.category));
   return categoryOrder.filter((category) => knownCategories.has(category));
@@ -1474,9 +1480,10 @@ function renderMenu() {
           const localized = localizeItem(item);
           const itemIndex = menuItems.indexOf(item);
           const imageStyle = item.image ? `background-image: url('${item.image}')` : "";
+          const showIcon = shouldShowItemIcon(item);
           return `
-            <button class="menu-card" type="button" data-index="${itemIndex}" style="--accent: ${item.accent}">
-              <span class="thumb" style="${imageStyle}">${item.image ? "" : makePlaceholder(localized)}</span>
+            <button class="menu-card${showIcon ? "" : " no-thumb"}" type="button" data-index="${itemIndex}" style="--accent: ${item.accent}">
+              ${showIcon ? `<span class="thumb" style="${imageStyle}">${item.image ? "" : makePlaceholder(localized)}</span>` : ""}
               <span class="card-copy">
                 <span class="card-title">${localized.name}</span>
                 <span class="card-description">${localized.description}</span>

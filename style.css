@@ -289,6 +289,12 @@ input[type="search"]::placeholder {
   cursor: pointer;
 }
 
+.menu-card.no-thumb {
+  grid-template-columns: 1fr auto;
+  min-height: 4.4rem;
+  padding: 0.8rem 0.9rem;
+}
+
 .menu-card:active {
   transform: scale(0.99);
 }
