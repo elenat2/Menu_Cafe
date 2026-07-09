@@ -36,7 +36,7 @@ body.modal-open {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: 8.6rem 1fr;
+  grid-template-columns: 10rem 1fr;
   gap: 1.15rem;
   align-items: center;
   padding: 1.4rem 1rem 1rem;
@@ -58,8 +58,8 @@ body.modal-open {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 8.6rem;
-  height: 8.6rem;
+  width: 10rem;
+  height: 10rem;
   overflow: hidden;
   background: var(--cream);
   border-radius: 8px;
@@ -436,12 +436,12 @@ input[type="search"]::placeholder {
     width: min(100%, 68rem);
     margin: 0 auto;
     padding-top: 2rem;
-    grid-template-columns: 11rem 1fr;
+    grid-template-columns: 12.5rem 1fr;
   }
 
   .brand-mark {
-    width: 11rem;
-    height: 11rem;
+    width: 12.5rem;
+    height: 12.5rem;
   }
 
   .items-grid {
