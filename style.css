@@ -36,8 +36,8 @@ body.modal-open {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: 10rem 1fr;
-  gap: 1.15rem;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.9rem;
   align-items: center;
   padding: 1.4rem 1rem 1rem;
   overflow: hidden;
@@ -58,8 +58,8 @@ body.modal-open {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 10rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7rem;
   overflow: hidden;
   background: var(--cream);
   border-radius: 8px;
@@ -85,9 +85,10 @@ body.modal-open {
 h1 {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2.7rem, 17vw, 5.8rem);
+  font-size: clamp(2.25rem, 12vw, 5.8rem);
   font-style: italic;
-  line-height: 0.92;
+  line-height: 0.96;
+  overflow-wrap: anywhere;
 }
 
 .intro {
